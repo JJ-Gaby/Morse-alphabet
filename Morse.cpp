@@ -5,6 +5,7 @@
 #include <windows.h>
 using namespace std;
 
+//Hecho por Leyra
 //tabla de codigo morse
 const string abcMorse[26] = {
     ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..",
@@ -18,6 +19,7 @@ const char abcLetra[26] = {
     'Y', 'Z'
 };
 //ambos arreglos son variables constantes y globales ya que son valores fijos.
+
 //Hecho por Matthew
 void sonido(string morse) {
     for (char c : morse) { //lo que hace esta funcion es como los vectores, lee cada caracter que sale del loop
