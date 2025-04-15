@@ -66,7 +66,7 @@ void LetraAmorse() {
     cout << "\nRondas completadas\n";
     cout << "Respuestas correctas: " << correcta << "\nRespuestas incorrectas: " << incorrecta << "\n"; //correctos e incorrectos fue reutilizado de Matrices.Inc, proyecto realizado por leyra el 2024.
     //se guardan los datos segun lo que el usuario haya sacado, se puede ver en historial, menu
-    ofstream archivo("puntajes.txt", ios::app);//lo que hace ios::app es consercar lo que esta en el txt file aunque salgas del mismo, tambien se puede esar ios::ate permite escribir al final del archivo. https://en.cppreference.com/w/cpp/io/basic_fstream
+    ofstream archivo("puntajes.txt", ios::app);//lo que hace ios::app es conservar lo que esta en el txt file aunque salgas del mismo. https://en.cppreference.com/w/cpp/io/basic_fstream
     archivo << "En letra a morse sacaste lo siguiente : \nCorrectas : " << correcta << "\n Incorrectas : " << incorrecta << "\n";
     archivo.close();
 }
@@ -126,22 +126,20 @@ void Menu() {
     char next;
     string codificar, decodificar;
     do {
-        cout << "---------------------------------\n";
-        cout << "Menu:\n";
-        cout << "1. Letras del abecedario a morse\n";
-        cout << "2. Morse a palabra\n";
-        cout << "3. Ver historial de puntajes\n";
-        cout << "4. Borrar historial\n";
-        cout << "5. Salir\n";
-        cout << "---------------------------------\n";
-        cout << "Elige una opcion valida: ";
+ cout << "\n----------------------------------------\n";
+ cout << "|               MENU                   |\n";
+ cout << "----------------------------------------\n";
+ cout << "|  1. Letras del abecedario a Morse    |\n";
+ cout << "|  2. Morse a letra                    |\n";
+ cout << "|  3. Ver historial de puntajes        |\n";
+ cout << "|  4. Borrar historial                 |\n";
+ cout << "|  5. Salir                            |\n";
+ cout << "----------------------------------------\n";
+ cout << "Elige una opcion valida: ";
         cin >> opc;
         cin.ignore();
 
-        
-        
         switch (opc) {
-
         case 1:
             LetraAmorse();
             break;
@@ -161,7 +159,7 @@ void Menu() {
             break;
         }
         case 4:{
-            ofstream archivoBorrar("puntajes.txt", ios::trunc);
+            ofstream archivoBorrar("puntajes.txt", ios::trunc); //trunc borra el contenido al momento que se ejecuta. https://en.cppreference.com/w/cpp/io/basic_fstream
             if (archivoBorrar.is_open()) {
                 archivoBorrar.close();
                 cout << "Contenido del archivo eliminado" << endl;
