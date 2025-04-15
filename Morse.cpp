@@ -71,18 +71,6 @@ void LetraAmorse() {
     archivo.close();
 }
 
-void sounds(string morse) {
-    for (char c : morse) {
-        if (c == '.') {
-            Beep(1000, 200);
-        }
-        else if (c == '-') {
-            Beep(1000, 600);
-        }
-        Sleep(200);
-    }
-}
-
 void MorseAletra() {
     int correct = 0, incorrect = 0;
     char opc;
