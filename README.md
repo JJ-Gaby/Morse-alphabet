@@ -12,11 +12,11 @@ This program allows you to:<br>
 All of this is managed through an interactive menu.
 
 # How to use it?
-Compile the code (if using g++):
-g++ -o morse morse.cpp
-Run the program:
-./morse
-Follow the instructions in the menu.
+Compile the code (if using g++):<br>
+g++ -o morse morse.cpp<br>
+Run the program:<br>
+./morse<br>
+
 You can play as many rounds as you want and review your score history.
 
 # Version History
