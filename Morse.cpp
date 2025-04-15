@@ -18,19 +18,19 @@ const char abcLetra[26] = {
     'Y', 'Z'
 };
 //ambos arreglos son variables constantes y globales ya que son valores fijos.
-
+//Hecho por Matthew
 void sonido(string morse) {
-    for (char c : morse) {
+    for (char c : morse) { //lo que hace esta funcion es como los vectores, lee cada caracter que sale del loop
         if (c == '.') {
-            Beep(1000, 200);
+            Beep(1000, 200); //1000 son los hertz para sonido agudo, 200 son los milisegundos de duracion de beep.
         }
         else if (c == '-') {
             Beep(1000, 600);
         }
-        Sleep(200);
+        Sleep(200); //Sleep es la pausa entre beeps
     }
 }
-
+//Void hecho por Leyra
 void LetraAmorse() {
     int correcta = 0, incorrecta = 0; //contador desde cero para la sumatoria
     char opc;
@@ -64,13 +64,13 @@ void LetraAmorse() {
 
     //output de que tan bien (o mal) le fue al usuario
     cout << "\nRondas completadas\n";
-    cout << "Respuestas correctas: " << correcta << "\nRespuestas incorrectas: " << incorrecta << "\n"; //correctos e incorrectos fue reutilizado de Matrices.Inc, proyecto realizado por leyra el 2024.
+    cout << "Respuestas correctas: " << correcta << "\nRespuestas incorrectas: " << incorrecta << "\n"; 
     //se guardan los datos segun lo que el usuario haya sacado, se puede ver en historial, menu
     ofstream archivo("puntajes.txt", ios::app);//lo que hace ios::app es conservar lo que esta en el txt file aunque salgas del mismo. https://en.cppreference.com/w/cpp/io/basic_fstream
     archivo << "En letra a morse sacaste lo siguiente : \nCorrectas : " << correcta << "\nIncorrectas : " << incorrecta << "\n";
     archivo.close();
 }
-
+//Hecho por Matthew
 void MorseAletra() {
     int correct = 0, incorrect = 0;
     char opc;
@@ -108,7 +108,7 @@ void MorseAletra() {
     archivo << "En morse a letra sacaste lo siguiente : \nCorrectas : " << correct << "\nIncorrectas : " << incorrect << "\n";
     archivo.close();
 }
-
+//Hecho por Matthew y Leyra
 void Menu() {
     int opc;
     do {
@@ -134,7 +134,7 @@ void Menu() {
             MorseAletra();
             break;
 
-        case 3: {
+        case 3: { //Hecho por Leyra
             cout << "Historial de puntajes\n";
             string text;
             ifstream archivo("puntajes.txt");//ifstream para leer el contenido del txt
@@ -144,7 +144,7 @@ void Menu() {
             archivo.close();
             break;
         }
-        case 4:{
+        case 4:{ //Hecho por Matthew
             ofstream archivoBorrar("puntajes.txt", ios::trunc); //trunc borra el contenido al momento que se ejecuta. https://en.cppreference.com/w/cpp/io/basic_fstream
             if (archivoBorrar.is_open()) {
                 archivoBorrar.close();
