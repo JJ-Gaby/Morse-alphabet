@@ -67,7 +67,7 @@ void LetraAmorse() {
     cout << "Respuestas correctas: " << correcta << "\nRespuestas incorrectas: " << incorrecta << "\n"; //correctos e incorrectos fue reutilizado de Matrices.Inc, proyecto realizado por leyra el 2024.
     //se guardan los datos segun lo que el usuario haya sacado, se puede ver en historial, menu
     ofstream archivo("puntajes.txt", ios::app);//lo que hace ios::app es conservar lo que esta en el txt file aunque salgas del mismo. https://en.cppreference.com/w/cpp/io/basic_fstream
-    archivo << "En letra a morse sacaste lo siguiente : \nCorrectas : " << correcta << "\n Incorrectas : " << incorrecta << "\n";
+    archivo << "En letra a morse sacaste lo siguiente : \nCorrectas : " << correcta << "\nIncorrectas : " << incorrecta << "\n";
     archivo.close();
 }
 
@@ -105,14 +105,12 @@ void MorseAletra() {
     cout << "Respuestas correctas: " << correct << "\nRespuestas incorrectas: " << incorrect << "\n";
     //se guardan los datos segun lo que el usuario haya sacado, se puede ver en historial, menu
     ofstream archivo("puntajes.txt", ios::app);//lo que hace ios::app es leer el archivo e ir directamente al final para seguir escribiendo, en comparacion a ios::ate que puede escribir de cualquier parte del archivo. https://mejorcodigo.com/p/66828.html
-    archivo << "En morse a letra sacaste lo siguiente : \nCorrectas : " << correct << "\n Incorrectas : " << incorrect << "\n";
+    archivo << "En morse a letra sacaste lo siguiente : \nCorrectas : " << correct << "\nIncorrectas : " << incorrect << "\n";
     archivo.close();
 }
 
 void Menu() {
     int opc;
-    char next;
-    string codificar, decodificar;
     do {
  cout << "\n----------------------------------------\n";
  cout << "|               MENU                   |\n";
