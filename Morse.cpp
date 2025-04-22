@@ -117,8 +117,8 @@ void Menu() {
  cout << "\n----------------------------------------\n";
  cout << "|               MENU                   |\n";
  cout << "----------------------------------------\n";
- cout << "|  1. Letras del abecedario a Morse    |\n";
- cout << "|  2. Morse a letra                    |\n";
+ cout << "|  1. Letra a Morse                    |\n";
+ cout << "|  2. Morse a Letra                    |\n";
  cout << "|  3. Ver historial de puntajes        |\n";
  cout << "|  4. Borrar historial                 |\n";
  cout << "|  5. Salir                            |\n";
